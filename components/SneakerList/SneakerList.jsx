@@ -1,6 +1,6 @@
 import React from "react";
 
-import SneakerCard from "./SneakerCard";
+import SneakerCard from "../SneakerCard/SneakerCard";
 
 const SneakerList = ({ sneakersList }) =>
   sneakersList.map((sneakerItem) => {
