@@ -7,10 +7,10 @@ const Layout = ({ children }) => {
         <Link href="/">
           <a>
             <h1>
-              <span>Just Add</span>
-              <span>Marmite</span>
+              <span>Sneaker</span>
+              <span>Daily</span>
             </h1>
-            <h2>Spread The Joy</h2>
+            <h2>Some freshness for your Sole</h2>
           </a>
         </Link>
       </header>
@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       <div className="page-content">{children}</div>
 
       <footer>
-        <p>Copyright 2021 Just Add Marmite!</p>
+        <p>Copyright 2021 Sneaker Daily!</p>
       </footer>
     </div>
   );
