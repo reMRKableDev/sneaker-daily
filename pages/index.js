@@ -2,7 +2,7 @@ import { createClient } from "contentful";
 import { space, accessToken, content_type } from "../configs";
 import { handleAsyncFunction } from "../utils";
 
-import { SneakerList } from "../components";
+import SneakerList from "../components/SneakerList/SneakerList";
 
 const Home = ({ sneakers }) => {
   return (
