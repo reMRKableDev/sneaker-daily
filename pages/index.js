@@ -1,8 +1,6 @@
-import { createClient } from "contentful";
-import { space, accessToken, content_type } from "../configs";
-import { handleAsyncFunction } from "../utils";
-
 import SneakerList from "../components/SneakerList/SneakerList";
+
+import { getEntriesCollection } from "../services/contentful";
 
 const Home = ({ sneakers }) => {
   return (
@@ -15,16 +13,9 @@ const Home = ({ sneakers }) => {
 export default Home;
 
 export async function getStaticProps() {
-  const client = createClient({
-    space,
-    accessToken,
-  });
+  const entriesCollection = await getEntriesCollection();
 
-  const [resSuccess, resError] = await handleAsyncFunction(
-    client.getEntries({ content_type })
-  );
-
-  if (resError) {
+  if (entriesCollection instanceof Error) {
     console.error(
       `Problems occurred while fetching entries from contentful: ${resError}`
     );
@@ -33,7 +24,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      sneakers: resSuccess.items,
+      sneakers: entriesCollection?.items,
     },
   };
 }
