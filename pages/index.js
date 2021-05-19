@@ -1,6 +1,6 @@
 import SneakerList from "../components/SneakerList/SneakerList";
 
-import { getEntriesCollection } from "../services/contentful";
+import { getAllEntriesCollection } from "../services";
 
 const Home = ({ sneakers }) => {
   return (
