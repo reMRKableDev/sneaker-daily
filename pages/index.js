@@ -12,7 +12,7 @@ const Home = ({ sneakers }) => {
 
 export default Home;
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const entriesCollection = await getAllEntriesCollection();
 
   if (entriesCollection instanceof Error) {
@@ -27,4 +27,4 @@ export async function getStaticProps() {
       sneakers: entriesCollection?.items,
     },
   };
-}
+};
