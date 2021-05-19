@@ -2,12 +2,8 @@ import SneakerList from "../components/SneakerList/SneakerList";
 
 import { getAllEntriesCollection } from "../services";
 
-const Home = ({ sneakers }) => {
-  return (
-    <div className="sneaker-list">
-      <SneakerList sneakersList={sneakers} />
-    </div>
-  );
+const Home = ({ sneakersList }) => {
+  return <SneakerList sneakersList={sneakersList} />;
 };
 
 export default Home;
@@ -24,7 +20,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      sneakers: entriesCollection?.items,
+      sneakersList: entriesCollection?.items,
     },
   };
 };

@@ -1,10 +1,12 @@
+import SneakerDetails from "../../components/SneakerDetails/SneakerDetails";
+
 import { getSneakerEntriesCollection } from "../../services";
 
-const SneakerDetails = () => {
-  return <div>Sneaker Details</div>;
+const DetailsPage = ({ sneakerDetails }) => {
+  return <SneakerDetails {...sneakerDetails} />;
 };
 
-export default SneakerDetails;
+export default DetailsPage;
 
 export const getStaticPaths = async () => {
   const sneakerCollection = await getSneakerEntriesCollection();
@@ -37,9 +39,9 @@ export const getStaticProps = async ({ params }) => {
     return;
   }
 
-  const [currentSneaker] = sneakerCollection?.items;
+  const [sneakerDetails] = sneakerCollection?.items;
 
   return {
-    props: { currentSneaker },
+    props: { sneakerDetails },
   };
 };
