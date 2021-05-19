@@ -13,7 +13,7 @@ const Home = ({ sneakers }) => {
 export default Home;
 
 export async function getStaticProps() {
-  const entriesCollection = await getEntriesCollection();
+  const entriesCollection = await getAllEntriesCollection();
 
   if (entriesCollection instanceof Error) {
     console.error(
