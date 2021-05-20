@@ -1,5 +1,7 @@
 # Sneaker Daily - Freshness for your Sole! 🚀🚀🚀
 
+[![CodeFactor](https://www.codefactor.io/repository/github/remrkabledev/sneaker-daily/badge)](https://www.codefactor.io/repository/github/remrkabledev/sneaker-daily)
+
 A simple application that overviews some sneakers. There are no extravagant features here, just an app that displays sneakers whose data is fed from a CMS. 
 
 ![sneaker-gif](./assets/sneaker.gif)
