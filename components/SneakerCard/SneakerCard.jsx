@@ -21,7 +21,7 @@ const SneakerCard = ({ title, thumbnail, slug }) => {
       </div>
       <div className={actions}>
         <Link href={`/sneakers/${slug}`}>
-          <a>More details</a>
+          <a>More Details</a>
         </Link>
       </div>
     </article>

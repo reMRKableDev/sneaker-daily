@@ -55,13 +55,18 @@ a {
 }
 
 .site-header span:last-child {
+  color: var(--brand-orange);
   font-size: 1.5em;
   font-weight: 800;
 }
 
 .site-header h2 {
+  background-color: var(--brand-white);
+  border: 2px solid var(--brand-dark-blue);
+  color: var(--brand-dark-blue);
   font-size: 0.8em;
   font-weight: 400;
+  padding: 0.5rem;
 }
 
 footer {
@@ -70,6 +75,11 @@ footer {
   padding: 40px;
   text-align: center;
   margin-top: auto;
+}
+
+footer a {
+  color: var(--brand-white);
+  font-family: "Noto Serif", serif;
 }
 
 .page-content {
