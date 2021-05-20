@@ -10,10 +10,10 @@ const SneakerCard = ({ title, thumbnail, slug }) => {
   const { width, height } = details?.image;
 
   return (
-    <div className={card}>
-      <div className="featured">
+    <article className={card}>
+      <figure className="featured">
         <Image src={`https:${url}`} width={width} height={height} />
-      </div>
+      </figure>
       <div className={content}>
         <article className={info}>
           <h4>{title}</h4>
@@ -24,7 +24,7 @@ const SneakerCard = ({ title, thumbnail, slug }) => {
           <a>More details</a>
         </Link>
       </div>
-    </div>
+    </article>
   );
 };
 

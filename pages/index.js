@@ -1,4 +1,4 @@
-import SneakerList from "../components/SneakerList/SneakerList";
+import SneakerList from "../components/SneakerList";
 
 import { getAllEntriesCollection } from "../services";
 

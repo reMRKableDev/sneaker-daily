@@ -1,5 +1,5 @@
-import SiteHeader from "./SiteHeader/SiteHeader";
-import SiteFooter from "./SiteFooter/SiteFooter";
+import SiteHeader from "./SiteHeader";
+import SiteFooter from "./SiteFooter";
 
 const Layout = ({ children }) => {
   return (

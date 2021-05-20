@@ -1,4 +1,4 @@
-import SneakerDetails from "../../components/SneakerDetails/SneakerDetails";
+import SneakerDetails from "../../components/SneakerDetails";
 
 import { getSneakerEntriesCollection } from "../../services";
 
