@@ -1,9 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Varela+Round&display=swap");
+
+:root {
+  --brand-white: #fff;
+  --brand-orange: #ef8354;
+}
 
 body {
-  background: #f4e640;
+  background: var(--brand-white);
   margin: 0;
-  font-family: "Roboto";
+  font-family: "Noto Serif", serif;
   font-size: 1.5em;
 }
 .layout {
@@ -24,6 +29,7 @@ header a {
 header h1,
 header h2 {
   margin: 0;
+  font-family: "Varela Round", sans-serif;
 }
 header span {
   display: block;
@@ -42,8 +48,8 @@ header h2 {
   font-weight: 400;
 }
 footer {
-  background: #111;
-  color: #bbb;
+  background: var(--brand-orange);
+  color: var(--brand-white);
   padding: 40px;
   text-align: center;
   margin-top: auto;

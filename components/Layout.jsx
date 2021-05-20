@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       <div className="page-content">{children}</div>
 
       <footer>
-        <p>Copyright 2021 Sneaker Daily!</p>
+        <p>Made with love by reMRKable Dev</p>
       </footer>
     </div>
   );
