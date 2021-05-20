@@ -10,7 +10,7 @@ const SneakerCard = ({ title, thumbnail, slug }) => {
   const { width, height } = details?.image;
 
   return (
-    <article className={card}>
+    <article className={`flex-column ${card}`}>
       <figure className="featured">
         <Image src={`https:${url}`} width={width} height={height} />
       </figure>

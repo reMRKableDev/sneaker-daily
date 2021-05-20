@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <div className="layout">
       <SiteHeader />
-      <main className="page-content">{children}</main>
+      <main className="page-content flex-row">{children}</main>
       <SiteFooter />
     </div>
   );
