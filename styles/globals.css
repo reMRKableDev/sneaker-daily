@@ -3,6 +3,9 @@
 :root {
   --brand-white: #fff;
   --brand-orange: #ef8354;
+  --brand-blue: #4f5d75;
+  --brand-dark-blue: #2d3142;
+  --brand-gray: #bfc0c0;
 }
 
 body {
@@ -11,49 +14,59 @@ body {
   font-family: "Noto Serif", serif;
   font-size: 1.5em;
 }
+
 .layout {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
+
 header {
   text-align: center;
   margin: 60px 0;
 }
+
 header a {
   text-decoration: none;
   color: black;
   text-transform: uppercase;
   display: inline-block;
 }
+
 header h1,
 header h2 {
   margin: 0;
   font-family: "Varela Round", sans-serif;
 }
+
 header span {
   display: block;
   line-height: 1em;
 }
+
 header span:first-child {
   font-size: 1em;
   font-weight: 400;
 }
+
 header span:last-child {
   font-size: 1.5em;
   font-weight: 800;
 }
+
 header h2 {
   font-size: 1.2em;
   font-weight: 400;
 }
+
 footer {
-  background: var(--brand-orange);
+  background: var(--brand-dark-blue);
   color: var(--brand-white);
   padding: 40px;
   text-align: center;
   margin-top: auto;
 }
+
 .page-content {
   max-width: 1200px;
   margin: 20px auto 80px;
