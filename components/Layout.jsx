@@ -1,25 +1,12 @@
-import Link from "next/link";
+import SiteHeader from "./SiteHeader/SiteHeader";
+import SiteFooter from "./SiteFooter/SiteFooter";
 
 const Layout = ({ children }) => {
   return (
     <div className="layout">
-      <header>
-        <Link href="/">
-          <a>
-            <h1>
-              <span>Sneaker</span>
-              <span>Daily</span>
-            </h1>
-            <h2>Some freshness for your Sole</h2>
-          </a>
-        </Link>
-      </header>
-
-      <div className="page-content">{children}</div>
-
-      <footer>
-        <p>Made with love by reMRKable Dev</p>
-      </footer>
+      <SiteHeader />
+      <main className="page-content">{children}</main>
+      <SiteFooter />
     </div>
   );
 };
