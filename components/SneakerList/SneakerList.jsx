@@ -1,5 +1,3 @@
-import React from "react";
-
 import SneakerCard from "../SneakerCard";
 
 const SneakerList = ({ sneakersList }) =>
