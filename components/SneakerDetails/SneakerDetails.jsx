@@ -10,7 +10,12 @@ const SneakerDetails = ({ fields }) => {
   return (
     <article>
       <header className="banner">
-        <Image src={`https:${url}`} width={width} height={height} />
+        <Image
+          src={`https:${url}`}
+          width={width}
+          height={height}
+          alt="sneaker"
+        />
         <h2>{title}</h2>
       </header>
       <div className="description">
