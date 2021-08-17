@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
     return;
   }
 
-  const paths = sneakerCollection?.items?.map((sneakerItem) => {
+  const paths = sneakerCollection?.items.map((sneakerItem) => {
     const { slug } = sneakerItem?.fields;
 
     return {
