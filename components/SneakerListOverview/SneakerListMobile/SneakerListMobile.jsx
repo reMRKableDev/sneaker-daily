@@ -1,7 +1,14 @@
-import React from "react";
+import SneakerCard from "../../SneakerCard";
+import styles from "./SneakerListMobile.module.scss";
 
-const SneakerListMobile = ({ sneakerList }) => {
-  return <div>I am mobile</div>;
+const SneakerListMobile = ({ sneakersList }) => {
+  return (
+    <div className={styles.sneakersContainer}>
+      {sneakersList.map(({ sys, fields }) => (
+        <SneakerCard key={sys?.id} {...fields} />
+      ))}
+    </div>
+  );
 };
 
 export default SneakerListMobile;

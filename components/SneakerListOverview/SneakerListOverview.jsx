@@ -7,9 +7,9 @@ const SneakerListOverview = ({ sneakersList }) => {
   const isDetectDevice = useIsDetectDevice();
 
   return isDetectDevice.isMobile() ? (
-    <SneakerListMobile sneakerList={sneakersList} />
+    <SneakerListMobile sneakersList={sneakersList} />
   ) : (
-    <SneakerListDesktop sneakerList={sneakersList} />
+    <SneakerListDesktop sneakersList={sneakersList} />
   );
 };
 
