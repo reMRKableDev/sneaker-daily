@@ -3,9 +3,9 @@ import SiteFooter from "./SiteFooter";
 
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
+    <div className="site-layout">
       <SiteHeader />
-      <main className="page-content flex-row">{children}</main>
+      <main>{children}</main>
       <SiteFooter />
     </div>
   );
