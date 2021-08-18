@@ -3,7 +3,7 @@ import styles from "./SneakerListMobile.module.scss";
 
 const SneakerListMobile = ({ sneakersList }) => {
   return (
-    <div className={styles.sneakersContainer}>
+    <div>
       {sneakersList.map(({ sys, fields }) => (
         <SneakerCard key={sys?.id} {...fields} />
       ))}

@@ -1,7 +1,14 @@
-import React from "react";
+import SneakerCard from "../../SneakerCard";
+import styles from "./SneakerListDesktop.module.scss";
 
-const SneakerListDesktop = ({ sneakerList }) => {
-  return <div>I am desktop</div>;
+const SneakerListDesktop = ({ sneakersList }) => {
+  return (
+    <div>
+      {sneakersList.map(({ sys, fields }) => (
+        <SneakerCard key={sys?.id} {...fields} />
+      ))}
+    </div>
+  );
 };
 
 export default SneakerListDesktop;
