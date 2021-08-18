@@ -3,7 +3,7 @@ import styles from "./SneakerListDesktop.module.scss";
 
 const SneakerListDesktop = ({ sneakersList }) => {
   return (
-    <div>
+    <div className={styles.sneakerListDesktop}>
       {sneakersList.map(({ sys, fields }) => (
         <SneakerCard key={sys?.id} {...fields} />
       ))}

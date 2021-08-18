@@ -1,7 +1,10 @@
 @import "styles/variables";
 
 .sneakerListMobile {
+  padding: 0 2rem;
+  margin-bottom: 3rem;
   display: grid;
+  border: 0.1rem solid orange;
 
   .singleView {
     grid-template-columns: repeat(1, 1fr);
