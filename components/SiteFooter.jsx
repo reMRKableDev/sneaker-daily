@@ -1,5 +1,4 @@
 import Link from "next/link";
-
 import Emoji from "./Emoji";
 
 const SiteFooter = () => {
