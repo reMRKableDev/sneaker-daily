@@ -1,4 +1,4 @@
-const detectDevice = (incomingUserAgent) => {
+const getDevice = (incomingUserAgent) => {
   const matchUserAgent = (compareValue) =>
     Boolean(incomingUserAgent.match(compareValue));
 
@@ -21,11 +21,11 @@ const detectDevice = (incomingUserAgent) => {
   };
 };
 
-const useIsMobile = () => {
+const useIsDetectDevice = () => {
   const userAgent =
     typeof navigator === "undefined" ? "SSR" : navigator.userAgent;
 
-  return detectDevice(userAgent);
+  return getDevice(userAgent);
 };
 
-export default useIsMobile;
+export default useIsDetectDevice;

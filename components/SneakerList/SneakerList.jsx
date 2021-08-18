@@ -1,11 +1,11 @@
-import useIsMobile from "../../hooks/useIsMobile";
+import useIsDetectDevice from "../../hooks/useIsDetectDevice";
 import SneakerCard from "../SneakerCard";
 import styles from "./SneakerList.module.scss";
 
 const SneakerList = ({ sneakersList }) => {
-  const isMobileDevice = useIsMobile();
+  const isDetectDevice = useIsDetectDevice();
 
-  return isMobileDevice.isMobile() ? (
+  return isDetectDevice.isMobile() ? (
     <div>Hello hello</div>
   ) : (
     <div className={styles.sneakersContainer}>
