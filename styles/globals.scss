@@ -1,12 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&family=Varela+Round&display=swap");
 @import "./variables";
 @import "./reset";
+@import "./mixins";
+
+html {
+  font-size: calc(10 / 375 * 100vw);
+
+  @include media {
+    font-size: calc(10 / 1440 * 100vw);
+  }
+}
 
 body {
-  background: $brandWhite;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+a,
+button {
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  border: none;
+  background: none;
   margin: 0;
-  font-size: 1.5em;
-  font-family: "Noto Serif", serif;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input {
+  outline: none;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a,
+button,
+li,
+ul,
+button,
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  &:focus {
+    outline: none;
+  }
 }
 
 h1,
@@ -16,12 +67,11 @@ h4,
 h5,
 h6,
 a {
-  font-family: "Varela Round", sans-serif;
-  margin: 0;
+  @include VarelaRoundRegular;
 }
 
 .layout {
-  min-height: 100vh;
+  //min-height: 100vh;
   display: flex;
   flex-direction: column;
 }

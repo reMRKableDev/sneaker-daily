@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap");
+
+@mixin media {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin VarelaRoundRegular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: normal;
+}
+
+@mixin NotoRegular {
+  font-family: "Noto Serif", sans-serif;
+  font-weight: normal;
+}
+
+@mixin NotoItalic {
+  font-family: "Noto Serif", sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
+@mixin NotoBold {
+  font-family: "Noto Serif", sans-serif;
+  font-weight: 700;
+}
