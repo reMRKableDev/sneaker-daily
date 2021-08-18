@@ -4,6 +4,7 @@
 @import "./mixins";
 
 html {
+  // 1 rem === 10px
   font-size: calc(10 / 375 * 100vw);
 
   @include media {
@@ -71,45 +72,39 @@ a {
 }
 
 .layout {
-  //min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .site-header {
   text-align: center;
-  margin: 60px 0;
+  margin: 2rem 0;
 }
 
-.site-header a {
+.site-header-title-container {
   text-decoration: none;
   color: $brandBlack;
   text-transform: uppercase;
   display: inline-block;
 }
 
-.site-header span {
-  display: block;
-  line-height: 1em;
+.site-header-title {
+  span:first-child {
+    font-size: 2rem;
+    display: block;
+  }
+
+  span:last-child {
+    color: $brandOrange;
+    font-size: 4rem;
+  }
 }
 
-.site-header span:first-child {
-  font-size: 1em;
-  font-weight: 400;
-}
-
-.site-header span:last-child {
-  color: $brandOrange;
-  font-size: 1.5em;
-  font-weight: 800;
-}
-
-.site-header h2 {
+.site-header-subtitle {
   background-color: $brandWhite;
-  border: 2px solid $brandDarkBlue;
+  border: 0.2rem solid $brandDarkBlue;
   color: $brandDarkBlue;
-  font-size: 0.8em;
-  font-weight: 400;
+  font-size: 1.2rem;
   padding: 0.5rem;
 }
 
