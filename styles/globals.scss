@@ -108,17 +108,30 @@ a {
   padding: 0.5rem;
 }
 
-footer {
+.site-footer {
+  @include VarelaRoundRegular;
   background: $brandDarkBlue;
   color: $brandWhite;
-  padding: 40px;
+  padding: 4rem;
   text-align: center;
-  margin-top: auto;
-}
+  font-size: 1.5rem;
 
-footer a {
-  color: $brandWhite;
-  font-family: "Noto Serif", serif;
+  @include media {
+    font-size: 1.8rem;
+  }
+
+  a {
+    @include NotoBold;
+    border-bottom: 0.1rem solid $brandWhite;
+    background-color: $brandDarkBlue;
+    padding: 0.2rem;
+    color: $brandWhite;
+    font-family: "Noto Serif", serif;
+
+    @include media {
+      padding: 0.5rem;
+    }
+  }
 }
 
 .page-content {

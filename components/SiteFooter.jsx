@@ -4,7 +4,7 @@ import Emoji from "./Emoji";
 
 const SiteFooter = () => {
   return (
-    <footer>
+    <footer className="site-footer">
       <p>
         Made with <Emoji symbol="❤️" label="love" /> by{" "}
         <Link href="https://remrkabledev.com">
