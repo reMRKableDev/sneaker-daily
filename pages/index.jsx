@@ -1,8 +1,8 @@
-import SneakerList from "../components/SneakerList";
+import SneakerListOverview from "../components/SneakerListOverview";
 import { getAllEntriesCollection } from "../services";
 
 const Home = ({ sneakersList }) => {
-  return <SneakerList sneakersList={sneakersList} />;
+  return <SneakerListOverview sneakersList={sneakersList} />;
 };
 
 export default Home;
