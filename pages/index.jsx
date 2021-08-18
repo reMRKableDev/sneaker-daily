@@ -1,5 +1,4 @@
 import SneakerList from "../components/SneakerList";
-
 import { getAllEntriesCollection } from "../services";
 
 const Home = ({ sneakersList }) => {

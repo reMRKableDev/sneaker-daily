@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import styles from "./SneakerCard.module.css";
+import styles from "./SneakerCard.module.scss";
 
 const SneakerCard = ({ title, thumbnail, slug }) => {
   const { card, content, info, actions } = styles;

@@ -1,5 +1,4 @@
 import SneakerDetails from "../../components/SneakerDetails";
-
 import { getSneakerEntriesCollection } from "../../services";
 
 const DetailsPage = ({ sneakerDetails }) => {
