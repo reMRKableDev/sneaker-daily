@@ -3,15 +3,19 @@
 .sneakerListMobile {
   padding: 0 2rem;
   margin-bottom: 3rem;
+}
+
+.singleView,
+.doubleView {
   display: grid;
+}
 
-  .singleView {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-  }
+.singleView {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+}
 
-  .doubleView {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
+.doubleView {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
 }
