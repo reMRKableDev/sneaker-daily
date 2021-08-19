@@ -1,20 +1,15 @@
 @import "styles/variables";
 
-.sneakerListDesktop {
+.sneakerListDesktopContainer {
   padding: 0 4rem;
   margin-bottom: 3rem;
 }
 
-.singleView,
+.sneakerListDesktop,
 .doubleView,
 .quadrupleView {
   display: grid;
   gap: 3rem;
-}
-
-.singleView {
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto;
 }
 
 .doubleView {
@@ -25,4 +20,46 @@
 .quadrupleView {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+}
+
+.sneakerDisplayViewsContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.sneakerDisplayDoubleView {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0;
+  width: 5rem;
+  height: 3rem;
+
+  .box {
+    width: 100%;
+    background-color: $brandGray;
+  }
+
+  .selectedSneakerView {
+    background-color: $brandOrange;
+  }
+}
+
+.sneakerDisplayQuadrupleView {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.3rem;
+  margin: 0;
+  width: 5rem;
+  height: 3rem;
+
+  .box {
+    width: 100%;
+    background-color: $brandGray;
+  }
+
+  .selectedSneakerView {
+    background-color: $brandOrange;
+  }
 }
