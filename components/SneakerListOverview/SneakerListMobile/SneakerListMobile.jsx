@@ -17,43 +17,52 @@ const SneakerListMobile = ({ sneakersList }) => {
     setIsDoubleView(true);
   };
 
+  const isViewSet = isSingleView || isDoubleView;
+
   useEffect(() => setIsSingleView(true), []);
 
   return (
-    <div className={styles.sneakerListMobileContainer}>
-      <div className={styles.sneakerDisplayViewsContainer}>
-        <div
-          className={styles.sneakerDisplaySingleView}
-          role="button"
-          tabIndex={0}
-          onClick={() => handleToggleSingleView()}
-          onKeyPress={() => handleToggleSingleView()}
-        >
-          <div className={styles.box}></div>
+    isViewSet && (
+      <div className={cn(styles.sneakerListMobileContainer)}>
+        <div className={styles.sneakerDisplayViewsContainer}>
+          <div
+            className={styles.sneakerDisplaySingleView}
+            role="button"
+            tabIndex={0}
+            onClick={() => handleToggleSingleView()}
+            onKeyPress={() => handleToggleSingleView()}
+          >
+            <div className={styles.box}></div>
+          </div>
+          <div
+            className={styles.sneakerDisplayDoubleView}
+            role="button"
+            tabIndex={0}
+            onClick={() => handleToggleDoubleView()}
+            onKeyPress={() => handleToggleDoubleView()}
+          >
+            <div className={styles.box}></div>
+            <div className={styles.box}></div>
+          </div>
         </div>
-        <div
-          className={styles.sneakerDisplayDoubleView}
-          role="button"
-          tabIndex={0}
-          onClick={() => handleToggleDoubleView()}
-          onKeyPress={() => handleToggleDoubleView()}
-        >
-          <div className={styles.box}></div>
-          <div className={styles.box}></div>
-        </div>
-      </div>
 
-      <div
-        className={cn({
-          [styles.sneakerListSingleView]: isSingleView,
-          [styles.sneakerListDoubleView]: isDoubleView,
-        })}
-      >
-        {sneakersList.map(({ sys, fields }) => (
-          <SneakerCard key={sys?.id} {...fields} />
-        ))}
+        <div
+          className={cn({
+            [styles.sneakerListSingleView]: isSingleView,
+            [styles.sneakerListDoubleView]: isDoubleView,
+          })}
+        >
+          {sneakersList.map(({ sys, fields }) => (
+            <SneakerCard
+              key={sys?.id}
+              {...fields}
+              isSingleViewMobile={isSingleView}
+              isDoubleViewMobile={isDoubleView}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    )
   );
 };
 
