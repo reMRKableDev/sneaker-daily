@@ -3,20 +3,26 @@
 .sneakerListDesktop {
   padding: 0 4rem;
   margin-bottom: 3rem;
+}
+
+.singleView,
+.doubleView,
+.quadrupleView {
   display: grid;
+  gap: 2rem;
+}
 
-  .singleView {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: auto;
-  }
+.singleView {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+}
 
-  .doubleView {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-  }
+.doubleView {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
 
-  .quadrupleView {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-  }
+.quadrupleView {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
 }
