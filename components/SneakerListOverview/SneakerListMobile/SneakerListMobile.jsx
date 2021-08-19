@@ -32,7 +32,11 @@ const SneakerListMobile = ({ sneakersList }) => {
             onClick={() => handleToggleSingleView()}
             onKeyPress={() => handleToggleSingleView()}
           >
-            <div className={styles.box}></div>
+            <div
+              className={cn(styles.box, {
+                [styles.selectedSneakerView]: isSingleView,
+              })}
+            ></div>
           </div>
           <div
             className={styles.sneakerDisplayDoubleView}
@@ -41,8 +45,16 @@ const SneakerListMobile = ({ sneakersList }) => {
             onClick={() => handleToggleDoubleView()}
             onKeyPress={() => handleToggleDoubleView()}
           >
-            <div className={styles.box}></div>
-            <div className={styles.box}></div>
+            <div
+              className={cn(styles.box, {
+                [styles.selectedSneakerView]: isDoubleView,
+              })}
+            ></div>
+            <div
+              className={cn(styles.box, {
+                [styles.selectedSneakerView]: isDoubleView,
+              })}
+            ></div>
           </div>
         </div>
 

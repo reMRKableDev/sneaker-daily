@@ -1,5 +1,4 @@
 @import "styles/variables";
-//@import "styles/mixins";
 
 .sneakerListMobileContainer {
   padding: 0 2rem;
@@ -40,6 +39,10 @@
     width: 100%;
     background-color: $brandGray;
   }
+
+  .selectedSneakerView {
+    background-color: $brandOrange;
+  }
 }
 
 .sneakerDisplayDoubleView {
@@ -53,8 +56,8 @@
     width: 100%;
     background-color: $brandGray;
   }
-}
 
-.selectedSneakerView {
-  background-color: $brandDarkBlue;
+  .selectedSneakerView {
+    background-color: $brandOrange;
+  }
 }
