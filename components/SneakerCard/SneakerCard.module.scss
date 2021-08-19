@@ -1,46 +1,52 @@
 @import "styles/variables";
+@import "styles/mixins";
 
-.card {
+.cardContainer {
   transform: rotateZ(-1deg);
-  border: 2px solid $brandDarkBlue;
-  margin: 15px;
+  border: 0.2rem solid $brandDarkBlue;
+  margin: 1.5rem 0;
 }
 
-.content {
+.cardTitleContainer {
   background: $brandWhite;
-  border: 2px solid $brandDarkBlue;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-  margin: 0;
+  border: 0.2rem solid $brandDarkBlue;
+  box-shadow: 0.2rem 0.3rem 0.5rem #555;
   position: relative;
-  top: -40px;
-  left: -10px;
+  top: -4rem;
+  left: -1rem;
+  width: 80%;
 }
 
-.info {
-  padding: 16px;
+.cardTitle,
+.cardCallToAction {
+  font-size: 1.4rem;
 }
 
-.info h4 {
-  margin: 4px 0;
+.cardTitle {
+  padding: 1.6rem;
   text-transform: uppercase;
   color: $brandDarkBlue;
 }
 
-.actions {
-  margin-top: 20px;
+.cardCallToAction {
   display: flex;
   justify-content: flex-end;
-}
 
-.actions a {
-  color: $brandWhite;
-  background-color: $brandOrange;
-  padding: 16px 24px;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
+  a {
+    color: $brandWhite;
+    background-color: $brandOrange;
+    padding: 2.4rem;
+    width: 50%;
+    text-align: center;
+    text-decoration: none;
 
-.actions a:hover {
-  transform: scale(1.2);
-  box-shadow: 1px 5px 8px rgba(0, 0, 0, 0.1);
+    @include media {
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        transform: scale(1.2);
+        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
 }
