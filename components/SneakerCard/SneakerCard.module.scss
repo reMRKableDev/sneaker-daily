@@ -5,6 +5,13 @@
   transform: rotateZ(-1deg);
   border: 0.2rem solid $brandDarkBlue;
   margin: 1.5rem 0;
+
+  @include media {
+    &:hover {
+      transform: rotateZ(1deg);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
 }
 
 .cardTitleContainer {
@@ -20,6 +27,10 @@
 .cardTitle,
 .cardCallToAction {
   font-size: 1.4rem;
+
+  @include media {
+    font-size: 1.6rem;
+  }
 }
 
 .cardTitle {
@@ -45,7 +56,7 @@
 
       &:hover {
         transform: scale(1.2);
-        box-shadow: 0.1rem 0.5rem 0.8rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0.1rem 0.5rem 0.8rem #555;
       }
     }
   }
