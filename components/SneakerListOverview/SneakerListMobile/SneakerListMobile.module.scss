@@ -1,21 +1,60 @@
 @import "styles/variables";
+//@import "styles/mixins";
 
-.sneakerListMobile {
+.sneakerListMobileContainer {
   padding: 0 2rem;
   margin-bottom: 3rem;
 }
 
-.singleView,
-.doubleView {
+.sneakerListMobileContainer,
+.sneakerListSingleView,
+.sneakerListDoubleView {
   display: grid;
 }
 
-.singleView {
+.sneakerListMobileContainer,
+.sneakerListSingleView {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
 }
 
-.doubleView {
+.sneakerListDoubleView {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
+  column-gap: 2rem;
+}
+
+.sneakerDisplayViewsContainer {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+}
+
+.sneakerDisplaySingleView {
+  display: flex;
+  margin: 0;
+  width: 2.5rem;
+  height: 3rem;
+
+  .box {
+    width: 100%;
+    background-color: $brandGray;
+  }
+}
+
+.sneakerDisplayDoubleView {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  width: 5rem;
+  height: 3rem;
+
+  .box {
+    width: 100%;
+    background-color: $brandGray;
+  }
+}
+
+.selectedSneakerView {
+  background-color: $brandDarkBlue;
 }
