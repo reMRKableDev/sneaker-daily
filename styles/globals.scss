@@ -23,6 +23,12 @@ body {
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 a,
 button {
   cursor: pointer;
@@ -75,6 +81,18 @@ a {
 .site-layout {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  align-items: stretch;
+}
+
+.site-main {
+  flex-grow: 1;
+}
+
+.site-main,
+.site-header,
+.site-footer {
+  flex-shrink: 0;
 }
 
 .site-header {
