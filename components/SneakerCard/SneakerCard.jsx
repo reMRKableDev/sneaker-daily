@@ -21,6 +21,7 @@ const SneakerCard = ({
           width={width}
           height={height}
           alt="sneaker"
+          className={styles.cardImage}
         />
       </figure>
 
