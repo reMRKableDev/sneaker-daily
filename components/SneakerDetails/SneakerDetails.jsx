@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import styles from "./SneakerDetails.module.scss";
 
 const SneakerDetails = ({ fields }) => {
   const { featuredImage, description, title } = fields;
@@ -8,17 +9,19 @@ const SneakerDetails = ({ fields }) => {
   const { width, height } = details?.image;
 
   return (
-    <article>
-      <header className="banner">
+    <article className={styles.detailsContainer}>
+      <figure className={styles.detailsImageContainer}>
         <Image
           src={`https:${url}`}
           width={width}
           height={height}
           alt="sneaker"
+          className={styles.detailsImage}
         />
+      </figure>
+
+      <div className={styles.detailsDescription}>
         <h2>{title}</h2>
-      </header>
-      <div className="description">
         {documentToReactComponents(description)}
       </div>
     </article>
