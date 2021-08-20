@@ -16,8 +16,18 @@
   }
 }
 
+.cardImageContainer {
+  &:hover {
+    @include floatingAnimation(floating, 0, 2rem, -0);
+
+    @include media {
+      @include floatingAnimation(floating, 0, 1.5rem, -0);
+    }
+  }
+}
+
 .cardImage {
-  filter: drop-shadow(0px 16px 10px $brandSneakerShadow);
+  filter: drop-shadow(0px 1.6rem 1rem $brandSneakerShadow);
 }
 
 .cardTitleContainer {

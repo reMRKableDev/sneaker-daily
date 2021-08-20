@@ -15,7 +15,7 @@ const SneakerCard = ({
 
   return (
     <article className={styles.cardContainer}>
-      <figure>
+      <figure className={styles.cardImageContainer}>
         <Image
           src={`https:${url}`}
           width={width}

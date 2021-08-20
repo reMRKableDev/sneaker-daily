@@ -29,3 +29,24 @@
   font-family: "Noto Serif", sans-serif;
   font-weight: 700;
 }
+
+@mixin floatingAnimation($name, $startValue, $middleValue, $endValue) {
+  animation-name: $name;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  @at-root {
+    @keyframes #{$name} {
+      0% {
+        transform: translate(0, $startValue);
+      }
+      50% {
+        transform: translate(0, $middleValue);
+      }
+      100% {
+        transform: translate(0, -$endValue);
+      }
+    }
+  }
+}
