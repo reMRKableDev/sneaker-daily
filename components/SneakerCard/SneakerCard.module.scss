@@ -7,6 +7,7 @@
   margin: 1.5rem 0;
 
   @include media {
+    width: 30rem;
     &:hover {
       transform: rotateZ(1deg);
       transition: transform 0.3s ease-in-out;

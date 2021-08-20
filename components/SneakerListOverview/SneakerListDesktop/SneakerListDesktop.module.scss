@@ -15,11 +15,14 @@
 .doubleView {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
+  justify-items: center;
+  padding: 5rem 30rem 0;
 }
 
 .quadrupleView {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+  padding-top: 5rem;
 }
 
 .sneakerDisplayViewsContainer {
