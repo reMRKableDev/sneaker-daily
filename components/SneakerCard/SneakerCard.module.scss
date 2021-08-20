@@ -5,6 +5,7 @@
   transform: rotateZ(-1deg);
   border: 0.2rem solid $brandDarkBlue;
   margin: 1.5rem 0;
+  background-color: $brandCardBg;
 
   @include media {
     width: 30rem;
