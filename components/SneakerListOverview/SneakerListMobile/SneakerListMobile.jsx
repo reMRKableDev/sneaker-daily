@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Swiper from "react-id-swiper";
 import cn from "classnames";
 import SneakerCard from "../../SneakerCard";
 import styles from "./SneakerListMobile.module.scss";

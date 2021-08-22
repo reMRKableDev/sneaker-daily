@@ -178,3 +178,49 @@ a {
     flex: 2;
   }
 }
+
+.swiper-pagination {
+  width: 9.6rem;
+  height: 0.6rem;
+  position: relative;
+  bottom: 2.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+}
+.swiper-pagination-zoom {
+  width: 9.6rem;
+  height: 0.6rem;
+  position: absolute;
+  bottom: 4.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-pagination-bullet {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: $brandGray;
+  display: flex;
+  border-radius: 100%;
+}
+.swiper-pagination-bullet-active {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: $brandGray;
+  display: flex;
+  border-radius: 100%;
+}
+
+.rc-slider-rail {
+  height: 0.2rem !important;
+}
+.rc-slider-track {
+  background-color: black !important;
+  height: 0.2rem !important;
+}

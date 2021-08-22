@@ -6,17 +6,29 @@
   border: 0.2rem solid $brandDarkBlue;
   margin: 1.5rem 0;
   background-color: $brandCardBg;
+  height: max-content;
 
   @include media {
     width: 30rem;
     &:hover {
-      transform: rotateZ(1deg);
+      transform: rotateZ(0deg);
       transition: transform 0.3s ease-in-out;
     }
   }
 }
 
 .cardImageContainer {
+  width: 33.5rem;
+
+  @include media {
+    cursor: grab;
+    width: 100%;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  
   &:hover {
     @include floatingAnimation(floating, 0, 2rem, -0);
 

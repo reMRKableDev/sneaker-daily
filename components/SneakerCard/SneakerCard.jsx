@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Swiper from "react-id-swiper";
 import Image from "next/image";
 import cn from "classnames";
 import styles from "./SneakerCard.module.scss";
@@ -6,24 +7,36 @@ import styles from "./SneakerCard.module.scss";
 const SneakerCard = ({
   title,
   thumbnail,
+  thumbnails,
   slug,
   isSingleViewMobile,
   isDoubleViewMobile,
 }) => {
-  const { url, details } = thumbnail?.fields?.file;
-  const { width, height } = details?.image;
-
+  const params = {
+    slidesPerView: 1,
+  };
   return (
     <article className={styles.cardContainer}>
-      <figure className={styles.cardImageContainer}>
-        <Image
-          src={`https:${url}`}
-          width={width}
-          height={height}
-          alt="sneaker"
-          className={styles.cardImage}
-        />
-      </figure>
+      <div className={styles.cardImageContainer}>
+        <Swiper {...params}>
+          {thumbnails.map((tnItem) => {
+            const { url, details } = tnItem?.fields?.file;
+            const { width, height } = details?.image;
+
+            return (
+              <figure key={tnItem?.sys?.id}>
+                <Image
+                  src={`https:${url}`}
+                  width={width}
+                  height={height}
+                  alt="sneaker"
+                  className={styles.cardImage}
+                />
+              </figure>
+            );
+          })}
+        </Swiper>
+      </div>
 
       <div className={styles.cardTitleContainer}>
         <h4
