@@ -10,16 +10,27 @@ const SneakerListMobile = ({ sneakersList }) => {
   const handleToggleSingleView = () => {
     setIsDoubleView(false);
     setIsSingleView(true);
+    localStorage.setItem("currentView", "isSingle");
   };
 
   const handleToggleDoubleView = () => {
     setIsSingleView(false);
     setIsDoubleView(true);
+    localStorage.setItem("currentView", "isDouble");
   };
 
   const isViewSet = isSingleView || isDoubleView;
 
-  useEffect(() => setIsSingleView(true), []);
+  useEffect(() => {
+    if (
+      !localStorage.getItem("currentView") ||
+      localStorage.getItem("currentView") === "isSingle"
+    ) {
+      setIsSingleView(true);
+    } else {
+      setIsDoubleView(true);
+    }
+  }, []);
 
   return (
     isViewSet && (
