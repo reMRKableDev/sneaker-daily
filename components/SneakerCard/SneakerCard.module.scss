@@ -6,6 +6,7 @@
   border: 0.2rem solid $brandDarkBlue;
   margin: 1.5rem 0;
   background-color: $brandCardBg;
+  // width: 10rem;
   height: max-content;
 
   @include media {
@@ -17,18 +18,28 @@
   }
 }
 
+.cardContainerWidthSingleViewMobile {
+  width: 30rem;
+}
+
+.cardContainerWidthDoubleViewMobile {
+  width: 15rem;
+}
+
+.swiper-wrapper {
+  padding: 0;
+}
+
 .cardImageContainer {
-  width: 33.5rem;
-
+  width: inherit;
   @include media {
-    cursor: grab;
     width: 100%;
-
+    cursor: grab;
     &:active {
       cursor: grabbing;
     }
   }
-  
+
   &:hover {
     @include floatingAnimation(floating, 0, 2rem, -0);
 

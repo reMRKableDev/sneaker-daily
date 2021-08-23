@@ -20,7 +20,12 @@ const SneakerCard = ({
     },
   };
   return (
-    <article className={styles.cardContainer}>
+    <article
+      className={cn(styles.cardContainer, {
+        [styles.cardContainerWidthSingleViewMobile]: isSingleViewMobile,
+        [styles.cardContainerWidthDoubleViewMobile]: isDoubleViewMobile,
+      })}
+    >
       <div className={styles.cardImageContainer}>
         <Swiper {...params}>
           {thumbnails.map((tnItem) => {
