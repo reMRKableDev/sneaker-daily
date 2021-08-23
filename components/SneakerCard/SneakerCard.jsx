@@ -14,6 +14,10 @@ const SneakerCard = ({
 }) => {
   const params = {
     slidesPerView: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   };
   return (
     <article className={styles.cardContainer}>
@@ -36,6 +40,10 @@ const SneakerCard = ({
             );
           })}
         </Swiper>
+        <>
+          <button className="swiper-button-prev">Prev</button>
+          <button className="swiper-button-next">Next</button>
+        </>
       </div>
 
       <div className={styles.cardTitleContainer}>
