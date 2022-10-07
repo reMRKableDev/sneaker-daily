@@ -51,9 +51,9 @@
   }
 }
 
-@mixin fadeInAnimation($name) {
+@mixin fadeInAnimation($name, $duration) {
   animation-name: $name;
-  animation-duration: 0.3s;
+  animation-duration: $duration;
   animation-timing-function: ease-in-out;
 
   @at-root {
