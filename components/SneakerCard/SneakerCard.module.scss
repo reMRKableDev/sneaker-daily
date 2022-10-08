@@ -131,8 +131,10 @@
   justify-content: flex-end;
 
   a {
-    color: $brandWhite;
-    background-color: $brandOrange;
+    border: 0.2rem solid $brandDarkBlue;
+    border-right: none;
+    border-bottom: none;
+    color: $brandDarkBlue;
     text-align: center;
     text-decoration: none;
 
@@ -141,12 +143,26 @@
       width: 50%;
       padding: 2rem;
       transition: all 0.4s ease-in-out;
-
-      &:hover {
-        transform: scale(1.05);
-        box-shadow: 0.1rem 0.5rem 0.8rem #555;
-      }
     }
+
+    &:hover,
+    &:focus {
+      border-color: $brandOrange;
+      color: $brandWhite;
+      box-shadow: inset 15rem 0 0 0 #{adjust-hue(
+          $color: $brandOrange,
+          $degrees: 0.5%
+        )};
+    }
+  }
+}
+
+.cardCallToActionSingleViewMobile,
+.cardCallToActionDoubleViewMobile {
+  a {
+    background-color: $brandOrange;
+    border-color: $brandOrange;
+    color: $brandWhite;
   }
 }
 
