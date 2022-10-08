@@ -1,6 +1,6 @@
-import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { EffectCreative } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import cn from "classnames";
 import styles from "./SneakerCard.module.scss";
@@ -24,7 +24,20 @@ const SneakerCard = ({
       })}
     >
       <div className={styles.cardImageContainer}>
-        <Swiper {...params} grabCursor={true}>
+        <Swiper
+          {...params}
+          grabCursor={true}
+          modules={[EffectCreative]}
+          effect={"creative"}
+          creativeEffect={{
+            prev: {
+              translate: ["-120%", 0, -500],
+            },
+            next: {
+              translate: ["120%", 0, -500],
+            },
+          }}
+        >
           {thumbnails.map((tnItem) => {
             const { url, details } = tnItem?.fields?.file;
             const { width, height } = details?.image;

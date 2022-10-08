@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import Layout from "../components/Layout";
 import "swiper/scss";
+import "swiper/css/effect-creative";
 
 function MyApp({ Component, pageProps }) {
   return (
