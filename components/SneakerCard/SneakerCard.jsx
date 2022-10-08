@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { EffectCreative } from "swiper";
+import { EffectCreative, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import cn from "classnames";
 import styles from "./SneakerCard.module.scss";
@@ -16,6 +16,7 @@ const SneakerCard = ({
     slidesPerView: 1,
   };
 
+  // TODO: Customize navigation buttons for Swiper
   return (
     <article
       className={cn(styles.cardContainer, {
@@ -27,7 +28,8 @@ const SneakerCard = ({
         <Swiper
           {...params}
           grabCursor={true}
-          modules={[EffectCreative]}
+          navigation={true}
+          modules={[EffectCreative, Navigation]}
           effect={"creative"}
           creativeEffect={{
             prev: {
