@@ -1,7 +1,6 @@
 import "../styles/globals.scss";
 import Layout from "../components/Layout";
-import "swiper/swiper.scss";
-
+import "swiper/scss";
 
 function MyApp({ Component, pageProps }) {
   return (
