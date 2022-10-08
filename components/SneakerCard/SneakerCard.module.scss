@@ -26,17 +26,13 @@
 }
 
 .cardImageContainer {
-  width: inherit;
+  width: 99.8%;
   @include media {
     width: 100%;
-    cursor: grab;
-    &:active {
-      cursor: grabbing;
-    }
   }
 
   &:hover {
-    @include floatingAnimation(floating, 0, 2rem, -0);
+    @include floatingAnimation(floating, 0, 1rem, -0);
 
     @include media {
       @include floatingAnimation(floating, 0, 1.5rem, -0);
