@@ -12,11 +12,7 @@ const SneakerCard = ({
   isSingleViewMobile,
   isDoubleViewMobile,
 }) => {
-  const params = {
-    slidesPerView: 1,
-  };
 
-  // TODO: Customize navigation buttons for Swiper
   return (
     <article
       className={cn(styles.cardContainer, {
@@ -26,9 +22,8 @@ const SneakerCard = ({
     >
       <div className={styles.cardImageContainer}>
         <Swiper
-          {...params}
+          slidesPerView={1}
           grabCursor={true}
-          navigation={true}
           modules={[EffectCreative, Navigation]}
           effect={"creative"}
           creativeEffect={{

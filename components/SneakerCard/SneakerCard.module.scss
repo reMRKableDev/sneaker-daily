@@ -30,6 +30,10 @@
   @include media {
     width: 100%;
   }
+}
+
+.cardImage {
+  filter: drop-shadow(0px 1.6rem 1rem $brandSneakerShadow);
 
   &:hover {
     @include floatingAnimation(floating, 0, 1rem, 0);
@@ -37,56 +41,6 @@
     @include media {
       @include floatingAnimation(floating, 0, 1.5rem, 0);
     }
-  }
-}
-
-.cardImage {
-  filter: drop-shadow(0px 1.6rem 1rem $brandSneakerShadow);
-}
-
-.cardImageArrowsContainer {
-  display: none;
-  @include media {
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    top: 60%;
-    width: 100%;
-  }
-}
-
-.cardImageNext,
-.cardImagePrev {
-  width: 3rem;
-  height: 3rem;
-  z-index: 1;
-  cursor: pointer;
-
-  @include media {
-    display: block;
-  }
-}
-
-.cardImageNext {
-  //right: 0.8rem;
-
-  @include media {
-    // right: 1.7rem;
-  }
-}
-
-.cardImagePrev {
-  // left: 0.8rem;
-
-  @include media {
-    // left: 1.7rem;
-  }
-}
-
-.cardImageArrowShow {
-  @include media {
-    @include fadeInAnimation(fadeInArrow, 0.3s);
-    display: block;
   }
 }
 
