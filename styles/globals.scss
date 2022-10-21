@@ -3,6 +3,10 @@
 @import "./reset";
 @import "./mixins";
 
+:root {
+  --swiper-theme-color: #ef8354 !important;
+}
+
 html {
   // 1 rem === 10px
   font-size: calc(10 / 375 * 100vw);
@@ -187,8 +191,6 @@ a {
   left: 50%;
   transform: translateX(-50%);
   z-index: 20;
-  display: flex;
-  justify-content: space-between;
 }
 .swiper-pagination-zoom {
   width: 9.6rem;

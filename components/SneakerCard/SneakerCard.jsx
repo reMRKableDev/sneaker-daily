@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { EffectCreative, Navigation } from "swiper";
+import { EffectCreative, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import cn from "classnames";
 import styles from "./SneakerCard.module.scss";
@@ -12,7 +12,6 @@ const SneakerCard = ({
   isSingleViewMobile,
   isDoubleViewMobile,
 }) => {
-
   return (
     <article
       className={cn(styles.cardContainer, {
@@ -24,7 +23,13 @@ const SneakerCard = ({
         <Swiper
           slidesPerView={1}
           grabCursor={true}
-          modules={[EffectCreative, Navigation]}
+          pagination={{
+            clickable: true,
+            renderBullet: (index, className) => {
+              return `<span class="${className}"></span>`;
+            },
+          }}
+          modules={[EffectCreative, Pagination]}
           effect={"creative"}
           creativeEffect={{
             prev: {
