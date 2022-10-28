@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import cn from "classnames";
 import styles from "./SneakerCard.module.scss";
 
+
 const SneakerCard = ({
   title,
   thumbnails,
