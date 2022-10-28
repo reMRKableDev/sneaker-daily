@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import cn from "classnames";
 import styles from "./SneakerCard.module.scss";
 
+import CardSwiperWrapper from "../CardSwiperWrapper";
 
 const SneakerCard = ({
   title,
@@ -21,43 +22,10 @@ const SneakerCard = ({
       })}
     >
       <div className={styles.cardImageContainer}>
-        <Swiper
-          slidesPerView={1}
-          grabCursor={true}
-          pagination={{
-            clickable: true,
-            renderBullet: (index, className) => {
-              return `<span class="${className}"></span>`;
-            },
-          }}
-          modules={[EffectCreative, Pagination]}
-          effect={"creative"}
-          creativeEffect={{
-            prev: {
-              translate: ["-120%", 0, -500],
-            },
-            next: {
-              translate: ["120%", 0, -500],
-            },
-          }}
-        >
-          {thumbnails.map((tnItem) => {
-            const { url, details } = tnItem?.fields?.file;
-            const { width, height } = details?.image;
-
-            return (
-              <SwiperSlide key={tnItem?.sys?.id}>
-                <Image
-                  src={`https:${url}`}
-                  width={width}
-                  height={height}
-                  alt="sneaker"
-                  className={styles.cardImage}
-                />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        <CardSwiperWrapper
+          thumbnails={thumbnails}
+          className={styles.cardImage}
+        />
       </div>
 
       <div className={styles.cardTitleContainer}>

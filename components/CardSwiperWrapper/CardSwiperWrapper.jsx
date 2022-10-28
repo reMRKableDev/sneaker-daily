@@ -1,13 +1,13 @@
 import Image from "next/image";
 import {
-  Swiper as CardSwiper,
+  Swiper as CardSwiperContainer,
   SwiperSlide as CardSwiperSlide,
 } from "swiper/react";
 import { EffectCreative, Pagination } from "swiper";
 
-const CarouselContainer = () => {
+const CardSwiperWrapper = ({ thumbnails, className }) => {
   return (
-    <CardSwiper
+    <CardSwiperContainer
       slidesPerView={1}
       grabCursor={true}
       pagination={{
@@ -38,13 +38,13 @@ const CarouselContainer = () => {
               width={width}
               height={height}
               alt="sneaker"
-              className={styles.cardImage}
+              className={className}
             />
           </CardSwiperSlide>
         );
       })}
-    </CardSwiper>
+    </CardSwiperContainer>
   );
 };
 
-export default CarouselContainer;
+export default CardSwiperWrapper;
