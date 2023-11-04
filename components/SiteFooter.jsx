@@ -6,9 +6,7 @@ const SiteFooter = () => {
     <footer className="site-footer">
       <p>
         Made with <Emoji symbol="❤️" label="love" /> by{" "}
-        <Link href="https://remrkabledev.com">
-          <a>reMRKable Dev </a>
-        </Link>
+        <Link href="https://remrkabledev.com">reMRKable Dev</Link>
       </p>
     </footer>
   );

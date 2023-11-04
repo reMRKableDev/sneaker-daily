@@ -45,9 +45,7 @@ const SneakerCard = ({
           [styles.cardCallToActionDoubleViewMobile]: isDoubleViewMobile,
         })}
       >
-        <Link href={`/sneakers/${slug}`}>
-          <a>More Details</a>
-        </Link>
+        <Link href={`/sneakers/${slug}`}>More Details</Link>
       </div>
     </article>
   );
