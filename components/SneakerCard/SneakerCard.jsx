@@ -25,7 +25,7 @@ const SneakerCard = ({
         <CardSwiperWrapper
           thumbnails={thumbnails}
           className={styles.cardImage}
-        />
+        ></
       </div>
 
       <div className={styles.cardTitleContainer}>

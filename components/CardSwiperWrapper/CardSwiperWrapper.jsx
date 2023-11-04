@@ -5,7 +5,7 @@ import {
 } from "swiper/react";
 import { EffectCreative, Pagination } from "swiper";
 
-const CardSwiperWrapper = ({ thumbnails, className }) => {
+const CardSwiperWrapper = ({ children, thumbnails, className }) => {
   return (
     <CardSwiperContainer
       slidesPerView={1}
