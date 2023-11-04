@@ -25,6 +25,8 @@ const SneakerCard = ({
         <CardSwiperWrapper
           thumbnails={thumbnails}
           className={styles.cardImage}
+          isSingleViewMobile={isSingleViewMobile}
+          isDoubleViewMobile={isDoubleViewMobile}
         />
       </div>
 

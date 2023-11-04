@@ -5,7 +5,22 @@ import {
 } from "swiper/react";
 import { EffectCreative, Pagination } from "swiper";
 
-const CardSwiperWrapper = ({ thumbnails, className }) => {
+const CardSwiperWrapper = ({
+  thumbnails,
+  className,
+  isSingleViewMobile,
+  isDoubleViewMobile,
+}) => {
+  const setHeight = () => {
+    if (isSingleViewMobile) {
+      return "400px";
+    } else if (isDoubleViewMobile) {
+      return "200px";
+    } else {
+      return "300px";
+    }
+  };
+
   return (
     <CardSwiperContainer
       slidesPerView={1}
@@ -32,7 +47,7 @@ const CardSwiperWrapper = ({ thumbnails, className }) => {
 
         return (
           <CardSwiperSlide key={tnItem?.sys?.id}>
-            <div style={{ position: "relative", height: "300px" }}>
+            <div style={{ position: "relative", height: setHeight() }}>
               <Image
                 src={`https:${url}`}
                 fill
