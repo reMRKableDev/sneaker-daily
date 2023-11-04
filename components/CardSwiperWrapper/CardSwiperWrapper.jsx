@@ -8,16 +8,13 @@ import { EffectCreative, Pagination } from "swiper";
 const CardSwiperWrapper = ({
   thumbnails,
   className,
-  isSingleViewMobile,
   isDoubleViewMobile,
 }) => {
   const setHeight = () => {
-    if (isSingleViewMobile) {
-      return "400px";
-    } else if (isDoubleViewMobile) {
+    if (isDoubleViewMobile) {
       return "200px";
     } else {
-      return "300px";
+      return "400px";
     }
   };
 
