@@ -1,15 +1,11 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import {
   Swiper as CardSwiperContainer,
   SwiperSlide as CardSwiperSlide,
 } from "swiper/react";
 import { EffectCreative, Pagination } from "swiper";
 
-const CardSwiperWrapper = ({
-  thumbnails,
-  className,
-  isDoubleViewMobile,
-}) => {
+const CardSwiperWrapper = ({ thumbnails, className, isDoubleViewMobile }) => {
   const setHeight = () => {
     if (isDoubleViewMobile) {
       return "200px";
@@ -47,7 +43,7 @@ const CardSwiperWrapper = ({
             <div style={{ position: "relative", height: setHeight() }}>
               <Image
                 src={`https:${url}`}
-                fill
+                layout="fill"
                 style={{
                   objectFit: "contain",
                 }}

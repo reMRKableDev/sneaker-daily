@@ -1,7 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-import { EffectCreative, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import cn from "classnames";
 import styles from "./SneakerCard.module.scss";
 
