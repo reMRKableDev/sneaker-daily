@@ -3,7 +3,7 @@ import Link from "next/link";
 const SiteHeader = () => {
   return (
     <header className="site-header">
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <span className="site-header-title-container">
           <h1 className="site-header-title">
             <span>Sneaker</span>
