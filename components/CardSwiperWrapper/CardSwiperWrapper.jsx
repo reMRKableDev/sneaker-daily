@@ -5,7 +5,7 @@ import {
 } from "swiper/react";
 import { EffectCreative, Pagination } from "swiper";
 
-const CardSwiperWrapper = ({ children, thumbnails, className }) => {
+const CardSwiperWrapper = ({ thumbnails, className }) => {
   return (
     <CardSwiperContainer
       slidesPerView={1}
@@ -28,18 +28,21 @@ const CardSwiperWrapper = ({ children, thumbnails, className }) => {
       }}
     >
       {thumbnails.map((tnItem) => {
-        const { url, details } = tnItem?.fields?.file;
-        const { width, height } = details?.image;
+        const { url } = tnItem?.fields?.file;
 
         return (
           <CardSwiperSlide key={tnItem?.sys?.id}>
-            <Image
-              src={`https:${url}`}
-              width={width}
-              height={height}
-              alt="sneaker"
-              className={className}
-            />
+            <div style={{ position: "relative", height: "300px" }}>
+              <Image
+                src={`https:${url}`}
+                fill
+                style={{
+                  objectFit: "contain",
+                }}
+                alt="sneaker"
+                className={className}
+              />
+            </div>
           </CardSwiperSlide>
         );
       })}
