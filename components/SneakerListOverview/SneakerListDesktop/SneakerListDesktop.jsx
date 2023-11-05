@@ -41,7 +41,6 @@ const SneakerListDesktop = ({ sneakersList }) => {
             role="button"
             tabIndex={0}
             onClick={() => handleToggleDoubleView()}
-            onKeyPress={() => handleToggleDoubleView()}
           >
             <div
               className={cn(styles.box, {
@@ -59,7 +58,6 @@ const SneakerListDesktop = ({ sneakersList }) => {
             role="button"
             tabIndex={0}
             onClick={() => handleToggleQuadrupleView()}
-            onKeyPress={() => handleToggleQuadrupleView()}
           >
             <div
               className={cn(styles.box, {

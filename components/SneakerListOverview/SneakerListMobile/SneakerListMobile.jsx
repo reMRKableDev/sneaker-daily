@@ -41,7 +41,6 @@ const SneakerListMobile = ({ sneakersList }) => {
             role="button"
             tabIndex={0}
             onClick={() => handleToggleSingleView()}
-            onKeyPress={() => handleToggleSingleView()}
           >
             <div
               className={cn(styles.box, {
@@ -54,7 +53,6 @@ const SneakerListMobile = ({ sneakersList }) => {
             role="button"
             tabIndex={0}
             onClick={() => handleToggleDoubleView()}
-            onKeyPress={() => handleToggleDoubleView()}
           >
             <div
               className={cn(styles.box, {
