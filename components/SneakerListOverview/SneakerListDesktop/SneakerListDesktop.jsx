@@ -7,6 +7,35 @@ const SneakerListDesktop = ({ sneakersList }) => {
   const [isDoubleView, setIsDoubleView] = useState(false);
   const [isQuadrupleView, setIsQuadrupleView] = useState(false);
 
+  useEffect(() => {
+    try {
+      const storedView = localStorage.getItem("currentView");
+      if (!storedView || storedView === "isQuadruple") {
+        setIsQuadrupleView(true);
+      } else {
+        setIsDoubleView(true);
+      }
+    } catch (error) {
+      console.error("Error accessing localStorage:", error);
+    }
+  }, []);
+
+  const renderSneakerBoxes = (count) => {
+    const boxes = [];
+    for (let i = 0; i < count; i++) {
+      boxes.push(
+        <div
+          key={i}
+          className={cn(styles.box, {
+            [styles.selectedSneakerView]:
+              (isDoubleView && count === 2) || (isQuadrupleView && count === 4),
+          })}
+        ></div>
+      );
+    }
+    return boxes;
+  };
+
   const handleToggleDoubleView = () => {
     setIsQuadrupleView(false);
     setIsDoubleView(true);
@@ -21,17 +50,6 @@ const SneakerListDesktop = ({ sneakersList }) => {
 
   const isViewSet = isDoubleView || isQuadrupleView;
 
-  useEffect(() => {
-    if (
-      !localStorage.getItem("currentView") ||
-      localStorage.getItem("currentView") === "isQuadruple"
-    ) {
-      setIsQuadrupleView(true);
-    } else {
-      setIsDoubleView(true);
-    }
-  }, []);
-
   return (
     isViewSet && (
       <div className={cn(styles.sneakerListDesktopContainer)}>
@@ -42,16 +60,7 @@ const SneakerListDesktop = ({ sneakersList }) => {
             tabIndex={0}
             onClick={() => handleToggleDoubleView()}
           >
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isDoubleView,
-              })}
-            ></div>
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isDoubleView,
-              })}
-            ></div>
+            {renderSneakerBoxes(2)}
           </div>
           <div
             className={styles.sneakerDisplayQuadrupleView}
@@ -59,26 +68,7 @@ const SneakerListDesktop = ({ sneakersList }) => {
             tabIndex={0}
             onClick={() => handleToggleQuadrupleView()}
           >
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isQuadrupleView,
-              })}
-            ></div>
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isQuadrupleView,
-              })}
-            ></div>
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isQuadrupleView,
-              })}
-            ></div>
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isQuadrupleView,
-              })}
-            ></div>
+            {renderSneakerBoxes(4)}
           </div>
         </div>
 

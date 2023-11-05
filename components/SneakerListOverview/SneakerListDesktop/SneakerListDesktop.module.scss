@@ -14,7 +14,6 @@
 }
 
 .doubleView {
-  // @include fadeInAnimation(fadeInView);
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   justify-items: center;
@@ -22,7 +21,6 @@
 }
 
 .quadrupleView {
-  // @include fadeInAnimation(fadeInView);
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   padding-top: 5rem;
