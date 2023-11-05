@@ -7,6 +7,35 @@ const SneakerListMobile = ({ sneakersList }) => {
   const [isSingleView, setIsSingleView] = useState(false);
   const [isDoubleView, setIsDoubleView] = useState(false);
 
+  useEffect(() => {
+    try {
+      const storedView = localStorage.getItem("currentView");
+      if (!storedView || storedView === "isSingle") {
+        setIsSingleView(true);
+      } else {
+        setIsDoubleView(true);
+      }
+    } catch (error) {
+      console.error("Error accessing localStorage:", error);
+    }
+  }, []);
+
+  const renderSneakerBoxes = (count) => {
+    const boxes = [];
+    for (let i = 0; i < count; i++) {
+      boxes.push(
+        <div
+          key={i}
+          className={cn(styles.box, {
+            [styles.selectedSneakerView]:
+              (isSingleView && count === 1) || (isDoubleView && count === 2),
+          })}
+        ></div>
+      );
+    }
+    return boxes;
+  };
+
   const handleToggleSingleView = () => {
     setIsDoubleView(false);
     setIsSingleView(true);
@@ -21,17 +50,6 @@ const SneakerListMobile = ({ sneakersList }) => {
 
   const isViewSet = isSingleView || isDoubleView;
 
-  useEffect(() => {
-    if (
-      !localStorage.getItem("currentView") ||
-      localStorage.getItem("currentView") === "isSingle"
-    ) {
-      setIsSingleView(true);
-    } else {
-      setIsDoubleView(true);
-    }
-  }, []);
-
   return (
     isViewSet && (
       <div className={cn(styles.sneakerListMobileContainer)}>
@@ -42,11 +60,7 @@ const SneakerListMobile = ({ sneakersList }) => {
             tabIndex={0}
             onClick={() => handleToggleSingleView()}
           >
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isSingleView,
-              })}
-            ></div>
+            {renderSneakerBoxes(1)}
           </div>
           <div
             className={styles.sneakerDisplayDoubleView}
@@ -54,16 +68,7 @@ const SneakerListMobile = ({ sneakersList }) => {
             tabIndex={0}
             onClick={() => handleToggleDoubleView()}
           >
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isDoubleView,
-              })}
-            ></div>
-            <div
-              className={cn(styles.box, {
-                [styles.selectedSneakerView]: isDoubleView,
-              })}
-            ></div>
+            {renderSneakerBoxes(2)}
           </div>
         </div>
 
