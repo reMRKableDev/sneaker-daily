@@ -12,3 +12,6 @@ export const getSneakerEntriesCollection = async (...slug) => {
       })
     : await handleContentfulEntriesCollection({ content_type: "sneaker" });
 };
+
+export const getGlobalEntriesCollection = async () =>
+  await handleContentfulEntriesCollection({ content_type: "global" });
